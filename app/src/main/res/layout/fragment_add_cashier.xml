@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Kasiyer Ekle" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutCashierNo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kasiyer No"
+                android:textColorHint="#B6B5B5"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextCashierNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutCashierNameSurname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Ad Soyad"
+                android:textColorHint="#B6B5B5"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                app:startIconDrawable="@drawable/baseline_account_circle_24"
+                app:startIconTint="#575656">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextCashierNameSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="#B6B5B5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Parola"
+                android:textColorHint="#B6B5B5"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#575656"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                app:startIconDrawable="@drawable/baseline_password_24"
+                app:startIconTint="#575656">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:textColorHint="#B6B5B5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutPasswordAgain"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Parola Tekrar"
+                android:textColorHint="#B6B5B5"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#575656"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                app:startIconDrawable="@drawable/baseline_password_24"
+                app:startIconTint="#575656">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextPasswordAgain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:textColorHint="#B6B5B5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchIptalIade"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="İptal İade"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchTahsilat"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Tahsilat"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchKasiyerGoruntuleme"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Kasiyer Görüntüleme"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchKasiyerEklemeDuzenleme"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Kasiyer Ekleme Düzenleme"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchKasiyerSilme"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Kasiyer Silme"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchUrunGoruntuleme"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Ürün Görüntüleme"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchUrunEklemeDuzenleme"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Ürün Ekleme Duzenleme"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchUrunSilme"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Ürün Silme"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchTumRaporlariGoruntuleme"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Tüm Raporları Görüntüleme"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchRaporKaydetGonder"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Rapor Kaydet Gönder"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchPosYonetimi"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Pos Yönetimi"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/switchbackground">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Admin"
+                    android:textColor="#B6B5B5"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="140dp"
+                    android:layout_height="72dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/background"
+                    android:singleLine="false"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:rippleColor="@color/white" />
+
+
+                <Button
+                    android:id="@+id/buttonSave"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="140dp"
+                    android:layout_height="72dp"
+                    android:layout_marginStart="24dp"
+                    android:backgroundTint="@color/background"
+                    android:layout_weight="1"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:rippleColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
